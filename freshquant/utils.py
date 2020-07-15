@@ -1,4 +1,5 @@
 import threading
+import importlib
 
 
 def lock(func):
@@ -29,3 +30,8 @@ def Singleton(cls):
             __instances[cls] = cls(*args, **kw)
         return __instances[cls]
     return wrapper
+
+
+def load_clz_from_file(module_name, clz_name, path):
+    module = importlib.machinery.SourceFileLoader(module_name, path).load_module()
+    return getattr(module, clz_name)

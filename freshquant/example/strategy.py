@@ -4,6 +4,7 @@ import logging
 
 logger = logging.getLogger('Strategy')
 
+
 class Strategy:
     start_time=''
     end_time=''
@@ -11,8 +12,8 @@ class Strategy:
     def init(self, *args, **kwargs):
         pass
 
-    def handler_data(self, *args, **kwargs):
+    def handler_bar(self, *args, **kwargs):
         pass
 
-    def finish(self, *args, **kwargs):
+    def finish_day(self, *args, **kwargs):
         pass
